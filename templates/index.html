@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- HTML document structure declaration -->
+<html lang="en">
+<!-- HTML element, specifies the language of the document as English -->
+
+<head>
+    <!-- Head section of the HTML document, contains metadata -->
+    <meta charset="UTF-8">
+    <!-- Character encoding declaration, specifies UTF-8 encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport meta tag, controls the zoom level and width of the webpage -->
+    <title>Language Translator</title>
+    <!-- Title of the webpage, displayed in the browser's title bar -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to an external stylesheet, Bootstrap CSS framework -->
+    <style>
+        /* CSS styles for the footer element */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Body section of the HTML document, contains the webpage's content -->
+    <div class="container mt-5">
+        <!-- Container element, provides a responsive fixed width container -->
+        <h1 class="text-center mb-4">Language Translator</h1>
+        <!-- Heading element, displays the title of the webpage -->
+        <form action="/translate" method="POST">
+            <!-- Form element, sends a POST request to the /translate URL -->
+            <div class="form-group">
+                <!-- Form group element, groups form controls and labels -->
+                <label for="text">Enter text to translate:</label>
+                <!-- Label element, provides a text description for the form control -->
+                <textarea class="form-control" id="text" name="text" rows="3"></textarea>
+                <!-- Textarea element, allows the user to enter multiple lines of text -->
+            </div>
+            <div class="form-group">
+                <!-- Form group element, groups form controls and labels -->
+                <label for="target_language">Select target language:</label>
+                <!-- Label element, provides a text description for the form control -->
+                <select class="form-control" id="target_language" name="target_language">
+                    <!-- Select element, allows the user to select an option from a dropdown list -->
+                    <option value="es">Spanish</option>
+                    <!-- Option element, specifies an option in the select list -->
+                    <option value="fr">French</option>
+                    <!-- Option element, specifies an option in the select list -->
+                    <!-- Add more language options as needed -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Translate</button>
+            <!-- Button element, submits the form when clicked -->
+        </form>
+        {% if translated_text %}
+        <!-- Conditional statement, checks if the translated_text variable is defined -->
+        <div class="mt-4">
+            <!-- Div element, provides a block-level element for styling and layout -->
+            <h4>Translated Text:</h4>
+            <!-- Heading element, displays the title of the translated text -->
+            <p>{{ translated_text }}</p>
+            <!-- Paragraph element, displays the translated text -->
+        </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <!-- Footer element, provides a block-level element for the webpage's footer -->
+        <p>Made by Deeksha Singh | BCA DS13</p>
+        <!-- Paragraph element, displays the author's name and credits -->
+    </footer>
+</body>
+
+</html>
