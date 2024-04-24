@@ -46,14 +46,14 @@ Before running the application, make sure you have the following installed:
 ## File Structure
 
 The project directory structure is as follows:
-`
+
 project/
 │
 ├── app.py
 │
 └── templates/
     └── index.html
-`
+
 - `app.py`: Python script containing the Flask application code.
 - `templates/`: Directory containing HTML templates for the frontend.
 
