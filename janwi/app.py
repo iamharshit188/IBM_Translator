@@ -11,7 +11,7 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 app = Flask(__name__)
 
 #IBM Credentials 
-authenticator = IAMAuthenticator('Xvtw1XzoP28_GPg1XhUSWstxSfcHZIjKrXO_vRZD8Df_')
+authenticator = IAMAuthenticator('7Tu1NKp_ROSmlMPGyQx03LmQhMKti7nDPQkemNQhvr8s')
 language_translator = LanguageTranslatorV3(
     version='2018-05-01',
     authenticator=authenticator
